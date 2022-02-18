@@ -3,7 +3,7 @@
  * @Author       : chenLiang
  * @Date         : 2022-02-14 11:35:07
  * @LastEditors  : chenLiang
- * @LastEditTime : 2022-02-16 17:43:40
+ * @LastEditTime : 2022-02-18 09:42:29
  */
 import axios from 'axios';
 
@@ -42,6 +42,7 @@ const request = (options: Options) => {
     };
 
 };
+
 
 
 class $http extends Http {
