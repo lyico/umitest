@@ -3,7 +3,7 @@
  * @Author       : chenLiang
  * @Date         : 2022-02-18 16:43:30
  * @LastEditors  : chenLiang
- * @LastEditTime : 2022-02-18 17:53:54
+ * @LastEditTime : 2022-02-23 17:27:29
  */
 import axios, { AxiosRequestHeaders, AxiosRequestConfig } from "axios";
 
@@ -19,7 +19,15 @@ const config: AxiosOptions = {
 
 class Http {
   // service;
+  sernice
   constructor(options: AxiosRequestConfig) {
+    this.sernice = axios.create(options);
+
+
+
+
+
 
   }
 }
+

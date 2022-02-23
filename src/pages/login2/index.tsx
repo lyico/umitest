@@ -3,14 +3,18 @@
  * @Author       : chenLiang
  * @Date         : 2022-02-18 10:00:48
  * @LastEditors  : chenLiang
- * @LastEditTime : 2022-02-18 16:28:17
+ * @LastEditTime : 2022-02-23 16:30:37
  */
 import { IRouteComponentProps } from 'umi';
 import { Form, Input, Button, message } from "antd";
 import styles from './index.less';
 import logo from 'img/logo.png';
+import { ProjectModal } from './projectModal'
+import { useState } from 'react';
 
 export default (props: IRouteComponentProps) => {
+
+	const [modal, setModal] = useState(false);
 
 	/**
 	 * 提交
@@ -51,6 +55,10 @@ export default (props: IRouteComponentProps) => {
 					<Button htmlType='submit' type="primary" block size='large'>登录</Button>
 				</Form.Item>
 			</Form>
+			<div>
+				<Button onClick={() => setModal(true)}>打开</Button>
+				<ProjectModal projectModalOpen={modal} onClose={() => setModal(false)} />
+			</div>
 		</div>
 	</div>
 }
